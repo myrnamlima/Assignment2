@@ -2,7 +2,7 @@ from otree.api import *
 import random
 
 doc = """
-This is the second-price sealed auction
+This is the second-price sealed bid auction
 """
 
 
