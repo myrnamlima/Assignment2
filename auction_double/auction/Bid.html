@@ -1,0 +1,22 @@
+{{ block title }}
+    Second-Price Sealed-Bid Auction
+{{ endblock }}
+{{ block content }}
+<style>
+    .my_style{
+        font-family: Georgia, serif;
+        font-size: 16px;
+    }
+</style>
+<div class="my_style">
+     <p>You are one of the {{C.PLAYERS_PER_GROUP}} players that are bidding in this auction. Your value of the good is {{player.value}}. </p>
+
+</div>
+{{ formfields }} {# this is a comment #}
+
+<button class="otree-btn-next btn btn-primary">Next</button>
+    {# can create a next button that is different than this #}
+
+{# you can build a table with round, your bid, win?, and price #}
+
+{{ endblock }}

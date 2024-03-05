@@ -1,0 +1,20 @@
+{{ block title }}
+    <h1>Results</h1>
+{{ endblock }}
+
+{{ block content }}
+<p>Your bid was {{ player.bid }}
+    <br>
+Your value was {{ player.value }}.
+    <br>
+The highest bid was {{ group.highest_bid }}.
+    <br>
+The second highest bid was {{ group.second_highest_bid }}.
+    <br>
+You {% if player.is_winner == True %} won {% else %} did not win {% endif %} the auction.
+    <br>
+Your period payoff: {{ player.payoff }}.</p>
+{{ next_button }}
+{{ endblock }}
+
+
