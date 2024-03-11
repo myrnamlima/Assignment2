@@ -44,6 +44,11 @@ def creating_session(subsession):
             p.participant.vars['totalEarnings'] = 0
             p.participant.vars['finished'] = False
 
+    if subsession.round_number == 5:
+        subsession.group_randomly()
+    elif subsession.round_number > 5:
+        subsession.group_like_round(5)
+
 def auction_outcome(g: Group): # function process a single group at a time
     players = g.get_players() #get the set of players in the group
     # bids = [p.bid for p in players if p.bid >= 0]

@@ -7,6 +7,33 @@
         font-family: Georgia, serif;
         font-size: 16px;
     }
+    .custom-btn {
+    background-color: #6b5388;
+    color: white; /* This will change the text color to white for better visibility */
+}
+    .custom-btn:hover {
+    background-color: #898ce1; /* Change the background color on hover */
+}
+    table.GeneratedTable {
+  width: 100%;
+  background-color: #ffffff;
+  border-collapse: collapse;
+  border-width: 2px;
+  border-color: #6b5388;
+  border-style: solid;
+  color: #000000;
+}
+
+table.GeneratedTable td, table.GeneratedTable th {
+  border-width: 2px;
+  border-color: #6b5388;
+  border-style: solid;
+  padding: 3px;
+}
+
+table.GeneratedTable thead {
+  background-color: #898ce1;
+}
 </style>
 <div class="my_style">
      <p>You are one of the {{C.PLAYERS_PER_GROUP}} players that are bidding in this auction. Your value of the good is {{player.value}}. </p>
@@ -14,9 +41,32 @@
 </div>
 {{ formfields }} {# this is a comment #}
 
-<button class="otree-btn-next btn btn-primary">Next</button>
+<button class="otree-btn-next btn btn-primary custom-btn">Next</button>
     {# can create a next button that is different than this #}
+<br>
+<br>
+<table class="GeneratedTable">
+  <thead>
+    <tr>
+      <th>Round</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{subsession.round_number}}</td>
+      <td>{{ player.value }}</td>
+
+    </tr>
+  </tbody>
+</table>
+
 
 {# you can build a table with round, your bid, win?, and price #}
 
 {{ endblock }}
+
+
+
+
+

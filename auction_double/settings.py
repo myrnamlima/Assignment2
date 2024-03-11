@@ -6,7 +6,7 @@ SESSION_CONFIGS = [
         name='auction',
         display_name="Second-Price Auction",
         app_sequence=['auction'],
-        num_demo_participants=3,
+        num_demo_participants=6,
     ),
   ]
 
