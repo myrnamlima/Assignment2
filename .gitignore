@@ -1,6 +1,6 @@
 venv
 staticfiles
-./db.sqlite3
+db.sqlite3
 .idea
 *~
 *.sqlite3
